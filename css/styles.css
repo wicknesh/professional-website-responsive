@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../images/chris-ried-ieic5Tq8YMk-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+nav {
+    background-color: black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 4rem;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+nav li:first-child {
+    font-family: "Nabla", serif;
+    font-size: 2rem;
+    margin-right: auto;
+}
+
+nav li:first-child:hover {
+    background-color: grey;
+}
+
+.displayOnMobile {
+    display:none;
+}
+
+@media screen and (max-width: 790px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .displayOnMobile {
+        display:block;
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 10rem;
+    max-width: 75rem;
+}
+
+.content-bg {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 5rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+.content-bg main p {
+    margin: 1rem 0;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 650px) {
+    .home .content-wrapper {
+        padding: 10px;
+    }
+    .content-bg {
+        padding: 20px;
+    }
+}
