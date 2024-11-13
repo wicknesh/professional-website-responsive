@@ -3,12 +3,13 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
 body {
-    min-height: 100vh;
-    background-image: url(../images/chris-ried-ieic5Tq8YMk-unsplash.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100%;
     font-family: "Merriweather Sans", sans-serif;
 }
 
@@ -65,9 +66,16 @@ nav li:first-child:hover {
 }
 
 .home {
+    background: url(../images/chris-ried-ieic5Tq8YMk-unsplash.jpg) no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
 }
+
+.home .content-wrapper {
+    flex: 1 0 auto;
+}
+
 
 .content-wrapper {
     margin: 0 auto;
@@ -76,7 +84,7 @@ nav li:first-child:hover {
 }
 
 .content-bg {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 5rem;
 }
 
@@ -93,11 +101,80 @@ h2 {
     font-weight: 300;
 }
 
-@media screen and (max-width: 650px) {
-    .home .content-wrapper {
-        padding: 10px;
+.content-bg img {
+    width: 250px;
+    float: left;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 1225px) {
+    h1 {
+        font-size: 2.5rem; 
     }
-    .content-bg {
-        padding: 20px;
+    h2 {
+        font-size: 1rem;
     }
+    .content-bg main p {
+        font-size: 0.75rem
+    }
+     .content-bg {
+        padding: 2.5rem;
+    }
+    .content-bg img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .content-bg img {
+        float: none;
+        margin-right: 0;
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 0.75rem;
+    }
+
+    .content-wrapper {
+        padding: 5rem;
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 420px) {
+    .content-wrapper {
+        padding: 2.5rem;
+    }
+    nav li:first-child {
+        font-size: 1.25rem;
+    }   
+}
+
+
+@media screen and (max-width: 440px){
+    footer {
+        text-align: center;
+    }
+
+    footer a {
+        margin-top: 1rem;
+    }
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: grey;
 }
